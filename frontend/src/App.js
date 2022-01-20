@@ -1,10 +1,10 @@
-
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
-    <div >
-      App Component
-    </div>
+    <Container className='py-5' >
+      <h1>Todo List</h1>
+    </Container>
   );
 }
 
