@@ -9,7 +9,16 @@ function App() {
   const [itemsList, setItemsList] = useState([]);
 
   useEffect(() => {
-    console.log(itemsList);
+    if (localStorage.getItem("itemsList") === null) {
+      localStorage.setItem("itemsList", JSON.stringify([]))
+    } else {
+      let local = JSON.parse(localStorage.getItem("itemsList"));
+      setItemsList(local);
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("itemsList", JSON.stringify(itemsList));
   }, [itemsList])
 
   return (
