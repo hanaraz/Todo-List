@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Input = ({ inputText, setInputText, itemsList, setItemsList }) => {
 
-    const [idCreator, setIdCreator] = useState(0);
     const onClick = () => {
-        setItemsList([...itemsList, { input: inputText, id: idCreator }]);
-        setIdCreator(idCreator + 1);
+        setItemsList([...itemsList, { input: inputText, id: uuidv4() }]);
         setInputText("");
     }
 

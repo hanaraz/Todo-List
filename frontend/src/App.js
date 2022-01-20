@@ -8,6 +8,7 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [itemsList, setItemsList] = useState([]);
 
+
   useEffect(() => {
     if (localStorage.getItem("itemsList") === null) {
       localStorage.setItem("itemsList", JSON.stringify([]))
