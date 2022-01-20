@@ -16,7 +16,7 @@ function App() {
     <Container className='py-5' >
       <h1>Todo List</h1>
       <Input inputText={inputText} setInputText={setInputText} setItemsList={setItemsList} itemsList={itemsList} />
-      <Items />
+      <Items setItemsList={setItemsList} itemsList={itemsList} />
     </Container>
   );
 }
