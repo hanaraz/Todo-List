@@ -6,8 +6,7 @@ const Items = () => {
     return (
         <Container >
             <Item />
-            <Item />
-            <Item />
+
         </Container>
     )
 
